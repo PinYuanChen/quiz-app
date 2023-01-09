@@ -1,0 +1,55 @@
+//
+// Created on 2023/1/9.
+//
+
+import XCTest
+import Foundation
+@testable import QuizApp
+
+final class ResultViewControllerTest: XCTestCase {
+
+    func test_viewDidLoad_renderSummary() {
+        XCTAssertEqual(makeSUT(summary: "a summary").headerLabel.text, "a summary")
+    }
+    
+    func test_viewDidLoad_renderAnswers() {
+        XCTAssertEqual(makeSUT(answers: []).tableView.numberOfRows(inSection: 0), 0)
+        XCTAssertEqual(makeSUT(answers: [makeDummyAnswer()]).tableView.numberOfRows(inSection: 0), 1)
+    }
+    
+    func test_viewDidLoad_withCorrectAnswer_renderCorrectAnswerCell() {
+        let sut = makeSUT(answers: [makeAnswer(isCorrect: true)])
+        
+        let cell = sut.tableView.cell(at: 0) as? CorrectAnswerCell
+        XCTAssertNotNil(cell)
+    }
+    
+//    func test_viewDidLoad_withCorrectAnswer_rendersQuestionText() {
+//        let answer = makeAnswer(question: "Q1", isCorrect: true)
+//        let sut = makeSUT(answers: [answer])
+//        let cell = sut.tableView.cell(at: 0) as! CorrectAnswerCell
+//        XCTAssertEqual(cell.questionLabel.text, "Q1")
+//    }
+    
+    func test_viewDidLoad_withWrongAnswer_renderWrongAnswerCell() {
+        let sut = makeSUT(answers: [makeAnswer(isCorrect: false)])
+        
+        let cell = sut.tableView.cell(at: 0) as? WrongAnswerCell
+        XCTAssertNotNil(cell)
+    }
+    
+    // MARK: Helpers
+    func makeSUT(summary: String = "", answers: [PresentableAnswer] = []) -> ResultViewController {
+        let sut = ResultViewController(summary: summary, answers: answers)
+        _ = sut.view
+        return sut
+    }
+    
+    func makeDummyAnswer() -> PresentableAnswer {
+        return makeAnswer(isCorrect: false)
+    }
+    
+    func makeAnswer(question: String = "", isCorrect: Bool) -> PresentableAnswer {
+        return PresentableAnswer(question: question, isCorrect: isCorrect)
+    }
+}
