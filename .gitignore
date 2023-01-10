@@ -3,3 +3,4 @@ QuizApp.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
 *.xcworkspacedata
 QuizApp.xcodeproj/xcuserdata/patrick.xcuserdatad/xcschemes/xcschememanagement.plist
 *.xcbkptlist
+.DS_Store
