@@ -25,8 +25,8 @@
 		CD4061C629690E9300AB9088 /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4061C429690E9300AB9088 /* QuestionViewController.xib */; };
 		CD8F192F296D4C1B00AF6E72 /* QuestionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8F192E296D4C1B00AF6E72 /* QuestionTest.swift */; };
 		CD8F1931296D4F0E00AF6E72 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8F1930296D4F0E00AF6E72 /* Question.swift */; };
-		CD8F1946296D592300AF6E72 /* QuizEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8F1945296D592300AF6E72 /* QuizEngine.framework */; };
-		CD8F1947296D592300AF6E72 /* QuizEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD8F1945296D592300AF6E72 /* QuizEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD8F1956296D5AEB00AF6E72 /* QuizEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8F1955296D5AEB00AF6E72 /* QuizEngine.framework */; };
+		CD8F1957296D5AEB00AF6E72 /* QuizEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD8F1955296D5AEB00AF6E72 /* QuizEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD92F562296BDF8B00A3CE49 /* ResultViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92F561296BDF8B00A3CE49 /* ResultViewControllerTest.swift */; };
 		CD92F564296BDFF000A3CE49 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92F563296BDFF000A3CE49 /* ResultViewController.swift */; };
 		CD92F566296BE03C00A3CE49 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD92F565296BE03C00A3CE49 /* ResultViewController.xib */; };
@@ -54,13 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CD8F1948296D592300AF6E72 /* Embed Frameworks */ = {
+		CD8F1958296D5AEB00AF6E72 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CD8F1947296D592300AF6E72 /* QuizEngine.framework in Embed Frameworks */,
+				CD8F1957296D5AEB00AF6E72 /* QuizEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +90,7 @@
 		CD8F192E296D4C1B00AF6E72 /* QuestionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTest.swift; sourceTree = "<group>"; };
 		CD8F1930296D4F0E00AF6E72 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		CD8F1945296D592300AF6E72 /* QuizEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QuizEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD8F1955296D5AEB00AF6E72 /* QuizEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QuizEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD92F561296BDF8B00A3CE49 /* ResultViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewControllerTest.swift; sourceTree = "<group>"; };
 		CD92F563296BDFF000A3CE49 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		CD92F565296BE03C00A3CE49 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
@@ -105,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD8F1946296D592300AF6E72 /* QuizEngine.framework in Frameworks */,
+				CD8F1956296D5AEB00AF6E72 /* QuizEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +197,7 @@
 		CDC5BF5F296D348F000FC0DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD8F1955296D5AEB00AF6E72 /* QuizEngine.framework */,
 				CD8F1945296D592300AF6E72 /* QuizEngine.framework */,
 				CDC5BF60296D348F000FC0DD /* QuizEngine.framework */,
 			);
@@ -212,7 +214,7 @@
 				CD40618729690B3A00AB9088 /* Sources */,
 				CD40618829690B3A00AB9088 /* Frameworks */,
 				CD40618929690B3A00AB9088 /* Resources */,
-				CD8F1948296D592300AF6E72 /* Embed Frameworks */,
+				CD8F1958296D5AEB00AF6E72 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
